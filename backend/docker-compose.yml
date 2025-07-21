@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.9.0
+    container_name: elasticsearch-dev22
+    environment:
+      - node.name=es01
+      - cluster.name=email-cluster
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - xpack.security.enabled=false
+      - xpack.security.transport.ssl.enabled=false  
+      - xpack.security.http.ssl.enabled=false
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    networks:
+      - elastic
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:9200/_cluster/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  chromadb:
+    image: chromadb/chroma:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - ALLOW_RESET=TRUE
+    volumes:
+      - chroma_data:/chroma/chroma
+    networks:
+      - app_network
+
+volumes:
+  elasticsearch_data:
+  chroma_data:
+
+networks:
+  elastic:
+    driver: bridge
+  app_network:
+    driver: bridge
+

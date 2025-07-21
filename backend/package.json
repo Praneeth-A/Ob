@@ -1,0 +1,47 @@
+{
+  "name": "reachinbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "node dist/server.js",
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "build:clean": "npm run clean && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@chroma-core/default-embed": "^0.1.8",
+    "@elastic/elasticsearch": "^8.18.2",
+    "@google/generative-ai": "^0.24.1",
+    "@slack/webhook": "^7.0.5",
+    "axios": "^1.10.0",
+    "chromadb": "^3.0.9",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "date-fns": "^4.1.0",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.0.1",
+    "helmet": "^8.1.0",
+    "imap": "^0.8.19",
+    "imapflow": "^1.0.191",
+    "nodemailer": "^7.0.5",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.4",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/helmet": "^4.0.0",
+    "@types/node": "^24.0.15",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  }
+}

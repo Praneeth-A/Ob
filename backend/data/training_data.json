@@ -1,0 +1,66 @@
+{
+  "job_application_responses": [
+    {
+      "context": "technical interview invitation",
+      "keywords": ["technical interview", "interview", "shortlisted", "technical round"],
+      "template": "Thank you for shortlisting my profile! I'm available for a technical interview. You can book a slot here: {meeting_link}",
+      "metadata": {
+        "type": "interview_booking",
+        "urgency": "high",
+        "category": "interested"
+      }
+    },
+    {
+      "context": "general interview invitation",
+      "keywords": ["interview", "schedule", "available", "when", "time"],
+      "template": "Thank you for considering my application! I'm excited about this opportunity. Please find my availability here: {meeting_link}",
+      "metadata": {
+        "type": "interview_booking",
+        "urgency": "high", 
+        "category": "interested"
+      }
+    },
+    {
+      "context": "final round invitation",
+      "keywords": ["final round", "final interview", "last stage", "final stage"],
+      "template": "Thank you for advancing me to the final round! I'm very excited about this opportunity. You can schedule the final interview here: {meeting_link}",
+      "metadata": {
+        "type": "interview_booking",
+        "urgency": "very_high",
+        "category": "interested"
+      }
+    },
+    {
+      "context": "positive response with enthusiasm",
+      "keywords": ["congratulations", "pleased", "excited", "selected"],
+      "template": "Thank you so much! I'm thrilled about this opportunity and look forward to discussing further. Here's my calendar for scheduling: {meeting_link}",
+      "metadata": {
+        "type": "positive_response",
+        "urgency": "high",
+        "category": "interested"
+      }
+    }
+  ],
+  "general_responses": [
+    {
+      "context": "thank you response",
+      "keywords": ["thank you", "thanks", "appreciate"],
+      "template": "You're welcome! Happy to help. Let me know if you need anything else.",
+      "metadata": {
+        "type": "acknowledgment",
+        "urgency": "low",
+        "category": "neutral"
+      }
+    },
+    {
+      "context": "follow up request",
+      "keywords": ["follow up", "update", "status", "progress"],
+      "template": "Thanks for following up! I'll get back to you with an update shortly.",
+      "metadata": {
+        "type": "follow_up",
+        "urgency": "medium", 
+        "category": "neutral"
+      }
+    }
+  ]
+}
