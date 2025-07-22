@@ -282,7 +282,7 @@ const subject = msg.envelope?.subject || '';
       folderType: folder.specialUse ,
       raw,
       // Future fields
-      aiCategory:null,
+      aiCategory,
       aiConfidence: null,
     //   hasAttachments: false,
     //   attachmentCount: 0
